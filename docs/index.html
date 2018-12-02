@@ -12,19 +12,27 @@
                 This is where the output usually is<br>
             </div>
             <!-- Drop down menu -->
-            <img src=''><button id='button' onclick="onMenuClick()">HI</button>
-            <table id='dropmenu' class='drop-content'>
-                <tr onclick="console.log(1)">
-                    <td>hi</td>
-                </tr>
-                <tr>
-                    <td>hi2</td>
-                </tr>
-            </table>
+            <div class='dropdown'>
+                <div id='buttoncontain'>
+              <button id='dropdownbutton'class='button' onclick="onMenuClick()">HI</button>
+                <button class='button'>Random Question</button>
+                <button class='button'>Generate quiz</button>
+</div>
+                <table id='dropmenu' class='drop-content'>
+                    <tr onclick="console.log(1)">
+                        <td>hi</td>
+                    </tr>
+                    <tr>
+                        <td>hi2</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 </body>
-<script type="text/javascript" src="./index.js"></script>
-<script type="text/javascript" src='./menu.js'></script>
+<script type="text/javascript" src='./libs/math.js'></script>
+<script type="text/javascript" src="./js/base.js"></script>
+<script type="text/javascript" src='./js/loadquestions.js'></script>
+<script type="text/javascript" src='./js/menu.js'></script>
 
 </html>
