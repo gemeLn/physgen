@@ -64,9 +64,11 @@ function unitSelect(element) {
     }
     console.log(unitList);
 }
-genMenu();
 
 function randomQuestion() {
-length = questionList.length;
-console.log(questionList[randI(0,length)]);
+    length = questionList.length;
+    question = questionList[randI(0, length)];
+    outputProblem(question);
 }
+genMenu();
+onCloseMenu();
