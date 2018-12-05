@@ -1,4 +1,8 @@
-window.list = [];
+window.questionList = [];
+window.unitList = new Array(11);
+for (var i = 1; i <= 10; i++) {
+    unitList[i] = true;
+}
 
 function readFile(file) {
     const xhr = new XMLHttpRequest();
@@ -29,8 +33,11 @@ function processFile(filename, file) {
                 problem.answer = problem.answer.split("[" + key + "]").join(varList[key]);
                 problem.question = problem.question.split("[" + key + "]").join(varList[key]);
             }
-            problem.answer=round2(math.eval(problem.answer));
-            list.push(problem);
+            temp = problem.answer;
+            try { problem.answer = round2(math.eval(problem.answer)); } catch (error) {
+                problem.answer = temp;
+            }
+            questionList.push(problem);
         } else if (lead == '%') {
             var params = content.split(" ");
             if (params.length != 3) {
@@ -47,8 +54,6 @@ function processFile(filename, file) {
         }
 
     }
-    console.log(list);
-
 }
 readFile('./sets/u1');
-setOutput(list[0].question + " " + list[0].answer);
+setOutput(questionList[0].question + " " + questionList[0].answer);
