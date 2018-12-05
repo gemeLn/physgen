@@ -20,30 +20,20 @@ function readFile(file) {
 
 function processFile(filename, file) {
     var problem = new Problem("", "");
-    var varList = {};
     for (var i = 0; i < file.length; i++) {
         line = file[i];
         lead = line[0];
         content = line.substring(1);
         if (lead == '+') {
             problem = new Problem("", "");
-            varList = {};
         } else if (lead == '-') {
-            for (var key in varList) {
-                problem.answer = problem.answer.split("[" + key + "]").join(varList[key]);
-                problem.question = problem.question.split("[" + key + "]").join(varList[key]);
-            }
-            temp = problem.answer;
-            try { problem.answer = round2(math.eval(problem.answer)); } catch (error) {
-                problem.answer = temp;
-            }
             questionList.push(problem);
-        } else if (lead == '%') {
-            var params = content.split(" ");
-            if (params.length != 3) {
+        } else if (lead == '!') {
+            var splits = content.split(" ");
+            if (splits.length != 3) {
                 console.error("Param length at line " + i + 1 + " of " + filename);
             } else {
-                varList[params[0]] = randF(parseInt(params[1]), parseInt(params[2]));
+                problem.params.push(splits);
             }
         } else if (lead == '@') {
             problem.answer += content;
@@ -55,5 +45,3 @@ function processFile(filename, file) {
 
     }
 }
-readFile('./sets/u1');
-setOutput(questionList[0].question + " " + questionList[0].answer);
