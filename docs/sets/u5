@@ -2,5 +2,5 @@
 !m1 1 4.9
 !m2 5 10
 @abs([m2]*9.8*(([m2]-[m1])/([m2]+[m1])-1))
-These two blocks of masses m1 = [m1] and m2 = [m2] are connected by a very light rope over a pulley. What is the tension in the rope?
+These two blocks of masses m<sub>1</sub> = [m1] and m<sub>2</sub> = [m2] are connected by a very light rope over a pulley. What is the tension in the rope?
 -

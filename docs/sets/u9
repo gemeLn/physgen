@@ -1,0 +1,7 @@
++
+!m 60 60
+!r 1.58 1.58
+!f 19 19
+@1000*[m]*[r]*(2*PI*[f]/3600)^2
+Given a plane of mass [m] kg, traveling in a horizontal circular loop of radius [r] km, which travels around the loop [f] times per hour: Find the strength of the force required to keep the airplane in its circular path.
+-

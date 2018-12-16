@@ -72,6 +72,6 @@ function randomQuestion() {
 }
 genMenu();
 onCloseMenu();
-window.questionList = [];
-readFile("./sets/u6","6");
+// window.questionList = [];
+// readFile("./sets/u9","test");
 console.log(questionList);

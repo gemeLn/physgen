@@ -1,0 +1,16 @@
++
+!m1 0 1
+!v1 2 5
+!m2 1 2
+!v2 -0.4 -5
+@0.5*[m2]*(([m1]*[v1]+[m2]*[v2])/[m2])^2- (0.5*[m1]*(([v1])^2))- (0.5*[m2]*(([v2])^2))
+A cart of mass [m1] initially moving at [v1] meters per second collides with a cart of mass [m2] moving at [v2]. After the collision, the first cart(The one of mass [m1]) sits at rest. Find the change in total kinetic energy of the two carts (in Joules) as a result of the collision.
+-
++
+!mt 300 600
+!ml 250 250
+!vt 10 20
+!vl -15 -5
+@([mt]*[vt]-[ml]*[vl])/([mt]-[ml])
+A Ford Pinto (mass [mt] kg) is driving to the east at [vt] m/s. But because of its famous exploding gas tank, it blows up, sending a [ml] kg chunk westward with velocity [vl] m/s. How fast is the rest of the car moving?
+-
