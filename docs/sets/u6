@@ -1,0 +1,8 @@
++
+!m 3 15
+!vi 4 12
+!vf 1 3.9
+!d 1 4
+@abs([m]([vf]^2-[vi]^2)/(2*[d]))
+A box of [m] kg slides across the floor at [vi] m/s. Then it hits a rough patch, from which it exits at [vf] m/s. If the patch is [d] m long, what is the force of friction exerted by the rough patch on the sliding mass?
+-

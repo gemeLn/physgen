@@ -19,9 +19,9 @@ window.onclick = function(event) {
 
 function onCloseMenu() {
     questionList = [];
-    for (var i = 1; i <= 10; i++) {
+    for (var i = 1; i <= totalUnits; i++) {
         if (unitList[i]) {
-            readFile("./sets/u" + i);
+            readFile("./sets/u" + i,String(i));
         }
     }
     console.log(questionList);
@@ -29,7 +29,7 @@ function onCloseMenu() {
 //Generate menu
 function genMenu() {
     var table = document.getElementById("dropmenu");
-    var total = 10;
+    var total = totalUnits;
     var running = 1;
     var columns = 5;
     while (running <= total) {
@@ -72,3 +72,6 @@ function randomQuestion() {
 }
 genMenu();
 onCloseMenu();
+window.questionList = [];
+readFile("./sets/u6","6");
+console.log(questionList);

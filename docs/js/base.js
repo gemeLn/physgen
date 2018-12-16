@@ -9,19 +9,21 @@ function outputProblem(problem) {
     for (var i in problem.params) {
         param = problem.params[i];
         var key = param[0];
-        var val = String(randF(parseInt(param[1]), parseInt(param[2])));
-        console.log(answer);
+        var val = String(randF(parseFloat(param[1]), parseFloat(param[2])));
         answer = answer.split("[" + key + "]").join(val);
         question = question.split("[" + key + "]").join(val);
     }
     var temp = answer;
-    try { answer = round2(math.eval(problem.answer)); } catch (error) {
+    try { answer = round2(math.eval(answer)); } catch (error) {
+    	console.log(temp.length)
         answer = temp;
+        console.log(error)
     }
-    setOutput(question + "<hr>" + answer);
+    setOutput(`<b>Unit ${problem.unit}</b><br>`+question + "<hr>" + answer);
 }
 
 function Problem(q, a) {
+	this.unit="";
     this.question = q;
     this.answer = a;
     this.params = [];

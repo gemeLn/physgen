@@ -1,0 +1,7 @@
++
+!d 130 130
+!ang 61 61
+!t 38.23 38.23
+@[d]tan([ang] deg)/([t])
+A [d] meter wide river flows to the east at unknown speed. You wish to reach a point on the opposite bank due south of your starting point. If you however aim your boat at [ang] west of south, your boat will move due south of your starting point
+-

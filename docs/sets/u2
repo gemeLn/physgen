@@ -1,0 +1,6 @@
++
+!ang 20 70
+!v 100 200
+@([v]sin([ang] deg))^2/19.6
+Aim your cannon at [ang] degrees above the horizon. The cannonball flies out at [v] meters per second. To what maximum height does the cannonball reach?
+-

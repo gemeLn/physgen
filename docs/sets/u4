@@ -1,0 +1,6 @@
++
+!f1 600 800
+!f2 300 599
+@([f1]+[f2])/19.6
+You stand on a scale in an elevator. When the elevator accelerates upward at <i>a</i>, the scale you stand on exerts a force of [f1] netwons. When it accelerates the same magnitude but downward, the scale you stand on exerts a force of [f2] newtons. What is your mass?
+-
