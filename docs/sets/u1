@@ -3,5 +3,5 @@
 !v 10 25
 !t 1.5 5
 @2(([d]-[v]*[t])/([t]^2))
-Initially driving at [v] meters per second, you aplly the brakes for [t] seconds, during which time your car travels [d] meters. What was its acceleration?
+Initially driving at [v] meters per second, you apply the brakes for [t] seconds, during which time your car travels [d] meters. What was its acceleration?
 -
